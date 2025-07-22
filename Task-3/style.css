@@ -1,0 +1,72 @@
+/* Calculator Interface - Designed by Blacknight */
+
+body {
+  background: linear-gradient(to bottom right, #e0ecff, #f4f4f4);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+.text-style{
+    color: crimson;
+}
+#display {
+  max-width: 275px;
+  height: 50px;
+  font-size: 1.5rem;
+  text-align: right;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Button styling */
+button {
+  padding: 15px;
+  font-size: 1.2rem;
+  border: none;
+  background: #f0f0f0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background-color: #dcdcdc;
+}
+
+/* Special buttons */
+.equal {
+  background-color: #4caf50;
+  color: white;
+}
+
+.equal:hover {
+  background-color: #3e9140;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+/* Invisible placeholder button to maintain grid alignment */
+.invisible {
+  visibility: hidden;
+  pointer-events: none;
+}
