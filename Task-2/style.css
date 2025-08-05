@@ -36,7 +36,7 @@ header {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #333;
+  color: #4d2c91;
 }
 
 nav ul {
@@ -74,7 +74,6 @@ nav ul li a:hover::after {
 }
 
 .btn {
-  
   background: #4d2c91;
   color: white;
   padding: 0.5rem 1rem;
@@ -91,7 +90,8 @@ nav ul li a:hover::after {
 .hero {
   background: linear-gradient(135deg, #f9f9f9, #ffffff);
   padding: 4rem 0;
-  border-radius: 0 0 40px 40px;
+  /* Removed curves */
+  border-radius: 0;
 }
 
 .hero-content {
