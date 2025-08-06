@@ -3,36 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dev Portfolio</title>
+  <title>MyPortfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- Navigation -->
   <nav>
     <div class="logo">MyPortfolio</div>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Skills</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <!-- <li><a href="#services">Services</a></li> -->
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <header class="hero">
+  <!-- Hero Section -->
+  <header class="hero" id="home">
     <div class="intro">
-      <h1>Hi, I'm Jordan Blake</h1>
-      <p>A passionate Front-End Developer with expertise in building clean and modern web interfaces.</p>
+      <h1>Hi, I'm Sanjay k shet</h1>
+      <p>A passionate Front-End Developer crafting modern & responsive web apps.</p>
       <a href="#contact" class="btn">Let's Connect</a>
     </div>
-    <img src="your-image.jpg" alt="Jordan Blake" class="hero-img">
+    <img src="photo.jpg" alt="Jordan Blake" class="hero-img">
   </header>
 
-  <section class="about">
+  <!-- About -->
+  <section class="about" id="about">
     <h2>About Me</h2>
-    <p>I specialize in crafting high-quality, responsive websites using HTML, CSS, and JavaScript. With a strong eye for design and usability, I aim to deliver seamless digital experiences.</p>
+    <p>I specialize in building high-quality, responsive websites using HTML, CSS, and JavaScript. I love creating seamless digital experiences with strong design principles.</p>
     <a href="resume.pdf" download class="btn-outline">Download CV</a>
+  </section>
+
+  <!-- Services
+  <section class="services" id="services">
+    <h2>Services</h2>
+    <div class="cards">
+      <div class="card">🌐 Web Design</div>
+      <div class="card">💻 Frontend Development</div>
+      <div class="card">📱 Responsive UI</div>
+    </div>
+  </section> -->
+
+  <!-- Skills -->
+  <section class="skills" id="skills">
+    <h2>My Skills</h2>
+    <div class="skill-bar">
+      <p>HTML</p>
+      <div class="progress"><div class="progress-fill" style="width: 90%"></div></div>
+      <p>CSS</p>
+      <div class="progress"><div class="progress-fill" style="width: 85%"></div></div>
+      <p>JavaScript</p>
+      <div class="progress"><div class="progress-fill" style="width: 75%"></div></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects" id="projects">
+    <h2>Projects</h2>
+    <div class="cards">
+      <div class="card">Portfolio Website</div>
+      <div class="card">E-Commerce Store</div>
+      <div class="card">Blog Platform</div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
   </section>
 
 </body>

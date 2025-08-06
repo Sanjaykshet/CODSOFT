@@ -7,8 +7,9 @@
 
 body, html {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #4d2c91, #5b77e3);
+  background: #f8faff;
   color: #333;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -17,7 +18,7 @@ body, html {
   margin: auto;
 }
 
-/* Navigation Bar */
+/* Header */
 header {
   background: white;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -86,12 +87,18 @@ nav ul li a:hover::after {
   background: #382069;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #f9f9f9, #ffffff);
-  padding: 4rem 0;
-  /* Removed curves */
-  border-radius: 0;
+  background: linear-gradient(135deg, #ad8ecd, #a6bbe0);
+  color: white;
+  padding: 5rem 0;
+  text-align: left;
 }
 
 .hero-content {
@@ -106,19 +113,18 @@ nav ul li a:hover::after {
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  color: #2e2e2e;
+  font-size: 2.8rem;
   margin-bottom: 1rem;
+  animation: fadeIn 2s ease;
 }
 
 .hero p {
   font-size: 1.1rem;
-  color: #555;
   margin-bottom: 1.5rem;
 }
 
 .btn-alt {
-  background: #5b77e3;
+  background: #ff8c42;
   color: white;
   padding: 0.6rem 1.2rem;
   border-radius: 20px;
@@ -127,25 +133,30 @@ nav ul li a:hover::after {
 }
 
 .btn-alt:hover {
-  background: #3a59c3;
+  background: #e57525;
 }
 
 .hero .image img {
   max-width: 400px;
   width: 100%;
+  mix-blend-mode: multiply;
 }
 
-/* Features Section */
-.features {
-  background: white;
+/* Sections */
+section {
   padding: 4rem 0;
   text-align: center;
 }
 
-.features h2 {
+h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
   color: #2e2e2e;
+}
+
+/* Features */
+.features {
+  background: #ffffff;
 }
 
 .features-grid {
@@ -165,4 +176,123 @@ nav ul li a:hover::after {
 .feature-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Doctors */
+.doctors {
+  background: #f0f4ff;
+}
+
+.doctor-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.doctor-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.doctor-card img {
+  max-width: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.doctor-card:hover {
+  transform: scale(1.05);
+}
+
+/* Contact */
+.contact {
+  background: linear-gradient(135deg, #a2bcea, #ba86f1);
+  color: white;
+}
+
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact input, .contact textarea {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+.contact button {
+  background: #ff8c42;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact button:hover {
+  background: #e57525;
+}
+
+/* Appointment */
+.appointment {
+  background: #bed9ef;
+}
+
+.appointment form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.appointment input, .appointment select {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
 }

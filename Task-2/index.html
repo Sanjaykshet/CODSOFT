@@ -8,37 +8,49 @@
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <div class="container nav-container">
       <div class="logo">MediCare+</div>
-      <nav>
+      <nav id="navbar">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Doctors</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#" class="btn">Book Appointment</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#doctors">Doctors</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#appointment" class="btn">Book Appointment</a></li>
         </ul>
       </nav>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
     </div>
   </header>
 
-  <section class="hero">
+  <!-- Hero Section -->
+  <section class="hero" id="home">
     <div class="container hero-content">
       <div class="text">
-        <h1>Your Health, Our Priority</h1>
+        <h1 class="fade-in">Your Health, Our Priority</h1>
         <p>Providing world-class healthcare solutions with expert doctors and modern facilities for you and your family.</p>
-        <a href="#" class="btn-alt">Find a Doctor</a>
+        <a href="#doctors" class="btn-alt">Find a Doctor</a>
       </div>
       <div class="image">
-        <img src="medical-team.png" alt="Medical team illustration" />
+        <img src="teamlogo.jpg" alt="Medical team illustration" />
       </div>
     </div>
   </section>
 
-  <!-- New Features Section -->
-  <section class="features">
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>At MediCare+, we are dedicated to delivering high-quality healthcare with compassion and care. 
+         Our team of professionals ensures that your well-being is our top priority.</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="features" id="services">
     <div class="container">
       <h2>Our Healthcare Services</h2>
       <div class="features-grid">
@@ -58,5 +70,62 @@
     </div>
   </section>
 
+  <!-- Doctors Section -->
+  <section class="doctors" id="doctors">
+    <div class="container">
+      <h2>Meet Our Doctors</h2>
+      <div class="doctor-grid">
+        <div class="doctor-card">
+          <!-- <img src="doctor1.png" alt="Doctor" /> -->
+          <h3>Dr. Amit R</h3>
+          <p>Cardiologist</p>
+        </div>
+        <div class="doctor-card">
+          <!-- <img src="doctor2.png" alt="Doctor" /> -->
+          <h3>Dr. Vishwa H</h3>
+          <p>Pediatrician</p>
+        </div>
+        <div class="doctor-card">
+          <!-- <img src="doctor3.png" alt="Doctor" /> -->
+          <h3>Dr. Surabhi</h3>
+          <p>Dermatologist</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Appointment Section -->
+  <section class="appointment" id="appointment">
+    <div class="container">
+      <h2>Book an Appointment</h2>
+      <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="date" required>
+        <input type="time" required>
+        <select required>
+          <option value="">Select Department</option>
+          <option value="cardiology">Cardiology</option>
+          <option value="pediatrics">Pediatrics</option>
+          <option value="dermatology">Dermatology</option>
+        </select>
+        <button type="submit" class="btn">Confirm Appointment</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>

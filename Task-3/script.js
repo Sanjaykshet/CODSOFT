@@ -1,4 +1,4 @@
-// Calculator Logic by Blacknight
+
 
 // Reference to the display element
 const display = document.getElementById("display");
